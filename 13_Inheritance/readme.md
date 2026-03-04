@@ -109,11 +109,11 @@ contract Erzi is Yeye, Baba{
 
 ### 修饰器的继承
 
-`Solidity`中的修饰器（`Modifier`）同样可以继承，用法与函数继承类似，在相应的地方加`virtual`和`override`关键字即可。
+`Solidity`中修饰器（`Modifier`）的`virtual`和`override`功能已被[废弃](https://docs.soliditylang.org/en/latest/contracts.html#modifier-overriding)，可通过继承合约来直接继承父合约中的修饰器。
 
 ```solidity
 contract Base1 {
-    modifier exactDividedBy2And3(uint _a) virtual {
+    modifier exactDividedBy2And3(uint _a) {
         require(_a % 2 == 0 && _a % 3 == 0);
         _;
     }
