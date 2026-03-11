@@ -18,7 +18,7 @@ tags:
 所有代码和教程开源在 github: [github.com/AmazingAng/WTF-Solidity](https://github.com/AmazingAng/WTF-Solidity)
 
 ---
-`Solidity`有三种方法向其他合约发送`ETH`，他们是：`transfer()`，`send()`和`call()`，其中`call()`是被鼓励的用法。
+`Solidity`有三种方法向其他合约发送`ETH`，他们是：`transfer()`，`send()`和`call()`，其中`call()`是被鼓励的用法，并且从`Solidity 0.8.31`起，使用`transfer()`和`send()`会触发编译器弃用警告。
 
 ## 接收ETH合约
 
